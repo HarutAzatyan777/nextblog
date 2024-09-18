@@ -3,6 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  
+    "rules": {
+      "react/button-has-type": "off"
+    },
+    
   extends: [
     'plugin:react/recommended',
     'airbnb',

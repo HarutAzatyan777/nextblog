@@ -27,13 +27,13 @@ const Header = () => {
           </Link>
           {/* Menu Icon for screens <= 1280px */}
           <div className="xl:hidden block">
-            <button onClick={toggleMenu} className="text-black">
+            <button type="button" onClick={toggleMenu} className="text-black">
               {/* Apply rotation class based on isMenuOpen */}
               <img
-                src="/menu_9777339.png" // Replace with the path to your icon image
+                src="/path/to/menu-icon.png" // Replace with the path to your icon image
                 alt="Menu"
                 className={`transition-transform duration-300 ${isMenuOpen ? '-rotate-90' : 'rotate-0'}`}
-                style={{ width: '32px', height: '32px' }} // Adjust size as needed
+                style={{ width: '24px', height: '24px' }} // Adjust size as needed
               />
             </button>
           </div>
