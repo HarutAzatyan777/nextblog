@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars } from 'react-icons/fa'; // Import this first
 import Link from 'next/link';
-import { getCategories } from '../services'; // Import this after react-icons/fa
+import { getCategories } from '../services';
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
@@ -30,9 +29,11 @@ const Header = () => {
           <div className="xl:hidden block">
             <button onClick={toggleMenu} className="text-black">
               {/* Apply rotation class based on isMenuOpen */}
-              <FaBars
-                size={24}
+              <img
+                src="/menu_9777339.png" // Replace with the path to your icon image
+                alt="Menu"
                 className={`transition-transform duration-300 ${isMenuOpen ? '-rotate-90' : 'rotate-0'}`}
+                style={{ width: '32px', height: '32px' }} // Adjust size as needed
               />
             </button>
           </div>
