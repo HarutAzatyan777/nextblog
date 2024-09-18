@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FaBars } from 'react-icons/fa'; // Import this first
 import Link from 'next/link';
-import { getCategories } from '../services';
-import { FaBars } from 'react-icons/fa';
+import { getCategories } from '../services'; // Import this after react-icons/fa
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
