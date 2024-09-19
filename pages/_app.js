@@ -2,10 +2,9 @@
 import React from 'react';
 import Head from 'next/head';
 
-
 import '../styles/globals.scss';
 import { Layout } from '../components';
-import GoogleAnalytics from '../utils/GoogleAnalytics'; // Import the GoogleAnalytics component
+import GoogleAnalytics from '../components/GoogleAnalytics';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,7 +12,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
       </Head>
-      <GoogleAnalytics /> {/* Include the GoogleAnalytics component */}
+      <GoogleAnalytics />
       <Layout>
         <Component {...pageProps} />
       </Layout>
