@@ -2,7 +2,7 @@
 
 ### [Live Site](https://blog.devaura.site/)
 
-![GraphCMS Headless Blog](https://ibb.co/r26Gjm6)
+!(https://ibb.co/r26Gjm6)
 
 ## Overview
 
