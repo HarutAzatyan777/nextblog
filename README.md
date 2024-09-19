@@ -1,17 +1,72 @@
 # GraphCMS Headless Blog
-### [Live Site](https://nextjs-plum-five-51.vercel.app/)
 
-![GraphCMS Headless Blog](https://i.ibb.co/NmnJnKD/image.png)
+### [Live Site](https://blog.devaura.site/)
 
-### [🌟 Become a top 1% Next.js 13 developer in only one course](https://jsmastery.pro/next13)
-### [🚀 Land your dream programming job in 6 months](https://jsmastery.pro/masterclass)
+![GraphCMS Headless Blog](https://ibb.co/r26Gjm6)
 
-## Stay up to date with new projects
-New major projects coming soon, subscribe to the mailing list to stay up to date https://resource.jsmasterypro.com/newsletter
+## Overview
 
-## Introduction
-This is a code repository for the corresponding video tutorial. 
+Welcome to the GraphCMS Headless Blog! This is a blog website built using GraphCMS as a headless CMS, providing a modern and efficient way to manage and display content.
 
-With featured and recent posts, categories. full markdown articles, author information, comments, and much more, this fully responsive CMS Blog App is the best Blog Application that you can currently find on YouTube. And what's best of all is that you and your clients can manage the blog from a dedicated Content Management System.
+## Features
 
-You'll also learn how to work with GraphCMS. GraphCMS is a headless content management system based on GraphQL technology enabling seamless integration with any application.
+- **Headless CMS Integration:** Utilizes GraphCMS for content management.
+- **Modern Design:** Clean and responsive design for an optimal reading experience.
+- **Static Site Generation:** Pages are pre-rendered for fast load times.
+
+## Stay Up to Date
+
+New major projects are coming soon! Subscribe to the mailing list to stay up to date with the latest news and updates:
+
+[Subscribe to the Mailing List](https://devaura.site/)
+
+## Getting Started
+
+To get started with development or contribute to the project, follow these steps:
+
+1. **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    ```
+
+2. **Install Dependencies:**
+
+    Navigate to the project directory and install the necessary dependencies:
+
+    ```bash
+    cd your-repository
+    npm install
+    ```
+
+3. **Start the Development Server:**
+
+    Run the development server locally:
+
+    ```bash
+    npm run dev
+    ```
+
+4. **Build the Project:**
+
+    To build the project for production:
+
+    ```bash
+    npm run build
+    ```
+
+5. **Start the Production Server:**
+
+    After building, start the server in production mode:
+
+    ```bash
+    npm start
+    ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or inquiries, please contact [harutazatyan45@gmail.com](developerhar@gmail.com).
