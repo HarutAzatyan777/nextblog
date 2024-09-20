@@ -32,7 +32,6 @@ const Header = () => {
               <img
                 src="menu_9777339.png" // Replace with the path to your icon image
                 alt="Menu"
-                className={`transition-transform duration-300 ${isMenuOpen ? '-rotate-90' : 'rotate-0'}`}
                 style={{ width: '24px', height: '24px' }} // Adjust size as needed
               />
             </button>
