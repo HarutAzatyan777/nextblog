@@ -30,7 +30,7 @@ const Header = () => {
             <button type="button" onClick={toggleMenu} className="text-black">
               {/* Apply rotation class based on isMenuOpen */}
               <img
-                src="menu_9777339.png" // Replace with the path to your icon image
+                src="/menu_9777339.png" // Replace with the path to your icon image
                 alt="Menu"
                 style={{ width: '24px', height: '24px' }} // Adjust size as needed
               />
