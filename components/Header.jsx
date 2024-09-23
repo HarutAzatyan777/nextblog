@@ -50,19 +50,21 @@ const Header = () => {
             </button>
           </div>
         </div>
-        {/* Categories - shown on larger screens or when menu is open on smaller screens */}
+        {/* Categories */}
         <div
           className={`xl:float-left xl:contents transition-all duration-500 ease-in-out 
           ${isMenuOpen ? 'max-h-96 opacity-100 flex' : 'max-h-0 opacity-0 hidden'} 
           overflow-hidden xl:max-h-full xl:opacity-100 flex-col items-center justify-center`}
         >
-          {categories.map((category, index) => (
-            <Link key={index} href={`/category/${category.slug}`}>
-              <span className="block mt-2 text-black font-semibold cursor-pointer text-center">
-                {category.name}
-              </span>
-            </Link>
-          ))}
+          <div className="flex flex-wrap justify-center xl:justify-start">
+            {categories.map((category, index) => (
+              <Link key={index} href={`/category/${category.slug}`}>
+                <span className="block mt-2 mx-2 px-4 py-2 text-black font-semibold cursor-pointer text-center border border-gray-300 rounded-lg">
+                  {category.name}
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </div>
