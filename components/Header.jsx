@@ -21,27 +21,44 @@ const Header = () => {
       <div className="border-b w-full inline-block border-black py-8">
         <div className="flex justify-between items-center">
           <Link href="/">
-            <span className="cursor-pointer font-bold text-4xl text-black" style={{ fontFamily: 'Lobster, cursive' }}>
-              Dev Aura
-            </span>
+            <img
+              src="/logo.png"
+              alt="Dev Aura"
+              className="cursor-pointer h-10 md:h-12 lg:h-14 xl:h-16"
+              style={{ width: 'auto', objectFit: 'contain' }}
+            />
           </Link>
           {/* Menu Icon for screens <= 1280px */}
           <div className="xl:hidden block">
-            <button type="button" onClick={toggleMenu} className="text-black">
-              {/* Apply rotation class based on isMenuOpen */}
-              <img
-                src="/menu_9777339.png" // Replace with the path to your icon image
-                alt="Menu"
-                style={{ width: '24px', height: '24px' }} // Adjust size as needed
+            <button
+              type="button"
+              onClick={toggleMenu}
+              className="flex flex-col justify-center items-center w-8 h-8"
+            >
+              <div
+                className={`w-6 h-0.5 bg-black transition-all duration-300 ease-in-out 
+                ${isMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}
+              />
+              <div
+                className={`w-6 h-0.5 bg-black transition-all duration-300 ease-in-out my-1 
+                ${isMenuOpen ? 'opacity-0' : ''}`}
+              />
+              <div
+                className={`w-6 h-0.5 bg-black transition-all duration-300 ease-in-out 
+                ${isMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}
               />
             </button>
           </div>
         </div>
         {/* Categories - shown on larger screens or when menu is open on smaller screens */}
-        <div className={`xl:float-left xl:contents ${isMenuOpen ? 'flex flex-col items-center' : 'hidden'} xl:block`}>
+        <div
+          className={`xl:float-left xl:contents transition-all duration-500 ease-in-out 
+          ${isMenuOpen ? 'max-h-96 opacity-100 flex' : 'max-h-0 opacity-0 hidden'} 
+          overflow-hidden xl:max-h-full xl:opacity-100 flex-col items-center justify-center`}
+        >
           {categories.map((category, index) => (
             <Link key={index} href={`/category/${category.slug}`}>
-              <span className="block xl:float-right mt-2 align-middle text-black ml-4 font-semibold cursor-pointer">
+              <span className="block mt-2 text-black font-semibold cursor-pointer text-center">
                 {category.name}
               </span>
             </Link>
