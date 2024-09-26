@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://blog.devaura.site/api/sitemap
+
+# Yandex-specific directives
+Host: blog.devaura.site
