@@ -24,6 +24,7 @@ const Header = () => {
             <img
               src="/logo.png"
               alt="Dev Aura"
+              title="Dev Aura"
               className="cursor-pointer h-10 md:h-12 lg:h-14 xl:h-16"
               style={{ width: 'auto', objectFit: 'contain' }}
             />

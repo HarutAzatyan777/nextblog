@@ -13,6 +13,7 @@ const PostCard = ({ post }) => (
         unoptimized
         loader={grpahCMSImageLoader}
         alt={post.title}
+        title={post.title}
         className="shadow-lg rounded-t-lg lg:rounded-lg"
         layout="fill"
         src={post.featuredImage.url}

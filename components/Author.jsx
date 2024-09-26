@@ -10,6 +10,7 @@ const Author = ({ author }) => (
         unoptimized
         loader={grpahCMSImageLoader}
         alt={author.name}
+        title={author.name}
         height="100px"
         width="100px"
         className="align-middle rounded-full"

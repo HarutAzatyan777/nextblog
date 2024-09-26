@@ -65,6 +65,7 @@ const PostDetail = ({ post }) => {
           <img
             key={index}
             alt={obj.title}
+            title={obj.title}
             height={obj.height}
             width={obj.width}
             src={obj.src}
@@ -82,7 +83,9 @@ const PostDetail = ({ post }) => {
         <div className="relative overflow-hidden shadow-md mb-6 flex justify-center items-center">
           <img
             src={post.featuredImage.url}
+            title={post.title} 
             alt="img"
+
             className="object-top w-[1200px] h-[630px] object-cover shadow-lg rounded-t-lg lg:rounded-lg"
           />
         </div>
