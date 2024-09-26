@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="web development, developer blog, Dev Aura, coding, programming" />
         <meta name="robots" content="index, follow" />
 
+        <title>Dev Aura - Insights and Resources for Developers</title>
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Dev Aura" />
         <meta property="og:description" content="Your go-to blog for development insights, tips, and resources." />
