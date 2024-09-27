@@ -10,12 +10,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <html lang="en" /> {/* Specify the language here */}
         {/* Primary Meta Tags */}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Dev Aura - Insights and resources for developers" />
         <meta name="author" content="Harutyun Azatyan" />
-        <meta name="keywords" content="web development, developer blog, Dev Aura, coding, programming" />
+        <meta name="keywords" content="blog, blogging, writing, tips, help, design, plugins, themes, content creation, digital marketing, online writing, blog tips, freelance writing, SEO writing" />
         <meta name="robots" content="index, follow" />
 
         <title>Dev Aura - Insights and Resources for Developers</title>
@@ -32,6 +33,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:description" content="Developer insights, coding tips, and resources." />
         <meta name="twitter:image" content="https://blog.devaura.site/twitter-image.png" /> {/* Add actual image URL */}
         <meta name="twitter:site" content="@DevAura" /> {/* Add your Twitter handle */}
+
+        {/* Social Media Meta Tags */}
+        <meta name="social-media" content="LinkedIn, Google, Yandex, media, Reddit" />
 
         {/* Fonts */}
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
