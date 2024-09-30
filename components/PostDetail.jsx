@@ -89,7 +89,8 @@ const PostDetail = ({ post }) => {
             className="object-top w-[1200px] h-[630px] object-cover shadow-lg rounded-t-lg lg:rounded-lg"
           />
         </div>
-        <div className="px-4 lg:px-0">
+        <div className="max-w-3xl mx-auto px-4 lg:px-0" style={{ maxWidth: '800px' }}>
+
           <div className="flex items-center mb-8 w-full">
             <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
               <img
