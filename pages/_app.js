@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { DefaultSeo } from 'next-seo';
-import { useRouter } from 'next/router'; // Import useRouter
+import { useRouter } from 'next/router';
+import Head from 'next/head'; // Import Head
 import '../styles/globals.scss';
 import { Layout } from '../components';
 import GoogleAnalytics from '../utils/GoogleAnalytics';
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter(); // Get the router object
+  const router = useRouter();
 
-  // Dynamic keyword generation
-  function getKeywords() {
-    const pageKeywords = pageProps?.keywords || []; // Pull keywords from pageProps
+  // Dynamic keyword generation with memoization
+  const keywords = useMemo(() => {
+    const pageKeywords = pageProps?.keywords || [];
     const additionalKeywords = [
       'web development',
       'programming',
@@ -24,14 +25,18 @@ function MyApp({ Component, pageProps }) {
       'front-end development',
     ];
     return [...pageKeywords, ...additionalKeywords].join(', ');
-  }
+  }, [pageProps]);
 
-  const keywords = getKeywords();
   const baseUrl = 'https://blog.devaura.site'; // Your base URL
   const dynamicUrl = `${baseUrl}${router.asPath}`; // Construct dynamic URL
 
   return (
     <>
+      <Head>
+        <link rel="publisher" href="https://devaura.site/" />
+        <link rel="canonical" href={dynamicUrl} /> {/* Use dynamic URL */}
+      </Head>
+
       <DefaultSeo
         title="Dev Aura - Insights and Resources for Developers"
         description="DevAura is your go-to blog for expert insights and resources on web development. Discover in-depth tutorials, coding tips, and industry news from seasoned developers. Stay ahead of the curve and elevate your skills with DevAura."
@@ -43,7 +48,7 @@ function MyApp({ Component, pageProps }) {
           description: 'Your go-to blog for development insights, tips, and resources.',
           images: [
             {
-              url: 'https://blog.devaura.site/og-image.png',
+              url: 'https://blog.devaura.site/og-image.png', // Consider making this dynamic if needed
               width: 1200,
               height: 630,
               alt: 'Dev Aura Blog',

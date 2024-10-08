@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router'; // Import useRouter
 import { getCategories } from '../services';
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter(); // Initialize useRouter to get current route
 
   useEffect(() => {
     getCategories().then((newCategories) => {
@@ -14,6 +16,12 @@ const Header = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenuOnMobile = () => {
+    if (window.innerWidth < 1280) {
+      setIsMenuOpen(false);
+    }
   };
 
   return (
@@ -29,7 +37,6 @@ const Header = () => {
               style={{ width: 'auto', objectFit: 'contain' }}
             />
           </Link>
-          {/* Menu Icon for screens <= 1280px */}
           <div className="xl:hidden block">
             <button
               type="button"
@@ -51,7 +58,6 @@ const Header = () => {
             </button>
           </div>
         </div>
-        {/* Categories */}
         <div
           className={`xl:float-left xl:contents transition-all duration-500 ease-in-out 
           ${isMenuOpen ? 'max-h-96 opacity-100 flex' : 'max-h-0 opacity-0 hidden'} 
@@ -59,10 +65,18 @@ const Header = () => {
         >
           <div className="flex flex-wrap justify-center xl:justify-start">
             {categories.map((category, index) => (
-              <Link key={index} href={`/category/${category.slug}`}>
-                <span className="block mt-2 mx-2 px-4 py-2 text-black font-semibold cursor-pointer text-center border border-gray-300 rounded-lg">
+              <Link key={index} href={`/category/${category.slug}`} passHref>
+                <a
+                  className={`block mt-2 mx-2 px-4 py-2 text-black font-semibold cursor-pointer text-center border border-gray-300 rounded-lg 
+                  ${
+                    router.asPath === `/category/${category.slug}`
+                      ? 'bg-black text-white' // Active category styling
+                      : ''
+                  }`}
+                  onClick={closeMenuOnMobile}
+                >
                   {category.name}
-                </span>
+                </a>
               </Link>
             ))}
           </div>
