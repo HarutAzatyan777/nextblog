@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="publisher" href="https://devaura.site/" />
         <link rel="canonical" href={dynamicUrl} /> {/* Use dynamic URL */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <DefaultSeo
