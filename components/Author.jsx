@@ -11,8 +11,8 @@ const Author = ({ author }) => (
         loader={grpahCMSImageLoader}
         alt={author.name}
         title={author.name}
-        height="100px"
-        width="100px"
+        height={100}
+        width={100}
         className="align-middle rounded-full"
         src={author.photo.url}
       />
